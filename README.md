@@ -1,12 +1,12 @@
 ## Note: this is based on https://github.com/frees-io/freestyle-template.g8
-This is a Giter8 template for Freestyle RPC Server projects.
+This is a Giter8 template for Freestyle RPC Protocol projects.
 
-## Creating New Freestyle RPC Server Project
+## Creating New Freestyle RPC Protocol Project
 
 1. Create a new project from Freestyle g8 template:
 
 ```scala
-sbt new jmjava/freestyle-rpc-server-template.g8
+sbt new jmjava/freestyle-rpc-protocol-template.g8
 ```
 
 2. Fill the required information (you can see an example below):
@@ -44,7 +44,7 @@ sbt orgScriptCI
 In the case you need to change this plugin, the easiest way to test it locally is:
 
 ```
-sbt new file:///the/path/to/freestyle-rpc-server-template.g8
+sbt new file:///the/path/to/freestyle-rpc-protocol-template.g8
 ```
 
 
