@@ -1,6 +1,6 @@
 lazy val root = (project in file(".")).
   settings(
-    name := "freestyle-rpc-server-template",
+    name := "freestyle-rpc-protocol-template",
     test in Test := {
       val _ = (g8Test in Test).toTask("").value
     },
