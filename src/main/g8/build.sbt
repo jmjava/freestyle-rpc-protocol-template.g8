@@ -15,7 +15,6 @@ lazy val core = crossProject
   .in(file("core"))
   .settings(moduleName := "core-$project$")
   .settings(scalaMetaSettings: _*)
-  .settings(noPublishSettings: _*)
   .crossDepSettings(commonDeps ++ freestyleCoreDeps(): _*)
   .settings(libraryDependencies += "io.frees" %% "frees-rpc-server" % "0.14.0")
   .settings(libraryDependencies += "io.frees" %% "frees-rpc-config" % "0.14.0")

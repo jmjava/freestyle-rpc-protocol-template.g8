@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
-package protocols
+package examples.todolist
+package protocol
 
-object Protocols extends PingPongProtocol
+object Protocols
+    extends PingPongProtocol
+    with TagProtocol
+    with TodoListProtocol
+    with TodoItemProtocol
