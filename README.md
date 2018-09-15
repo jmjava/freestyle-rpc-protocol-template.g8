@@ -19,15 +19,19 @@ sbt new file:///the/path/to/freestyle-rpc-protocol-template.g8
 ```
 
 
-##### For example from the checkout directory 
+##### For example from the checkout directory - use the template to generate a new project
 
 ```
 /git/freestyle-rpc-protocol-template.g8$ sbt new file://`pwd`﻿
 
-/git/freestyle-rpc-protocol-template.g8/freestyle-proto-poc/ sbt compile package
+--follow prompts
 
+```
 
+##### Now compile and package the project
 
+```
+/git/freestyle-rpc-protocol-template.g8/freestyle/ sbt compile package
 
 ```
 
