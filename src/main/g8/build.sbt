@@ -1,7 +1,6 @@
 lazy val root = project
   .in(file("."))
   .settings(name := "$project$")
-  .settings(moduleName := "root")
   .settings(noPublishSettings: _*)
   .settings(scalaMetaSettings: _*)
   .settings(libraryDependencies ++= commonDeps ++ freestyleCoreDeps())
@@ -15,7 +14,7 @@ lazy val root = project
 
 lazy val core = crossProject
   .in(file("core"))
-  .settings(moduleName := "$project$")
+  .settings(moduleName := "core-$project$")
   .settings(scalaMetaSettings: _*)
   .crossDepSettings(commonDeps ++ freestyleCoreDeps(): _*)
   .settings(libraryDependencies += "io.frees" %% "frees-rpc-server" % "0.14.0")
@@ -28,3 +27,7 @@ lazy val core = crossProject
 
 lazy val coreJVM = core.jvm
 lazy val coreJS = core.js
+
+artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
+  artifact.name + "-" + module.revision + "." + artifact.extension
+}
