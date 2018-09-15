@@ -31,7 +31,7 @@ sbt new file:///the/path/to/freestyle-rpc-protocol-template.g8
 ##### Now compile and package the project
 
 ```
-/git/freestyle-rpc-protocol-template.g8/freestyle/ sbt compile package
+/git/freestyle-rpc-protocol-template.g8/freestyle/ sbt publishLocal
 
 ```
 

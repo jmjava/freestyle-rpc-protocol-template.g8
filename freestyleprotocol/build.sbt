@@ -1,6 +1,6 @@
 lazy val root = project
   .in(file("."))
-  .settings(name := "$project$")
+  .settings(name := "freestyle-protocol")
   .settings(scalaMetaSettings: _*)
   .settings(libraryDependencies ++= commonDeps ++ freestyleCoreDeps())
   .settings(libraryDependencies += "io.frees" %% "frees-rpc-server" % "0.14.0")
@@ -13,7 +13,7 @@ lazy val root = project
 
 lazy val core = crossProject
   .in(file("core"))
-  .settings(moduleName := "core-$project$")
+  .settings(moduleName := "core-freestyle-protocol")
   .settings(scalaMetaSettings: _*)
   .settings(noPublishSettings: _*)
   .crossDepSettings(commonDeps ++ freestyleCoreDeps(): _*)
