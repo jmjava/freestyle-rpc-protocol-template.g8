@@ -37,7 +37,10 @@ import freestyle.rpc.protocol._
 
 trait TodoItemProtocol {
 
-  final case class TodoItemMessage(item: String, todoListId: Int, completed: Boolean, id: Int)
+  final case class TodoItemMessage(item: String,
+                                   todoListId: Int,
+                                   completed: Boolean,
+                                   id: Int)
 
   final case class TodoItemRequest(item: String, todoListId: Int)
 

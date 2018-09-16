@@ -22,21 +22,21 @@ import freestyle.rpc.protocol._
 trait PingPongProtocol {
 
   /**
-   * Pong response with current timestamp
-   *
-   * @param time Current timestamp.
-   */
+    * Pong response with current timestamp
+    *
+    * @param time Current timestamp.
+    */
   final case class Pong(time: Long = System.currentTimeMillis() / 1000L)
 
   @service(Protobuf)
   trait PingPongService[F[_]] {
 
     /**
-     * A simple ping-pong rpc.
-     *
-     * @param empty
-     * @return Pong response with current timestamp.
-     */
+      * A simple ping-pong rpc.
+      *
+      * @param empty
+      * @return Pong response with current timestamp.
+      */
     def ping(empty: Empty.type): F[Pong]
 
   }
