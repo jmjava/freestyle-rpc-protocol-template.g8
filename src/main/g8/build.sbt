@@ -1,4 +1,4 @@
-git aaddCompilerPlugin("org.scalameta" % "paradise" % "3.0.0-M11" cross CrossVersion.full)
+addCompilerPlugin("org.scalameta" % "paradise" % "3.0.0-M11" cross CrossVersion.full)
 
 version in ThisBuild := "0.1.2-SNAPSHOT"
 
